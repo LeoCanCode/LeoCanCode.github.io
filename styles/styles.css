@@ -2,9 +2,9 @@
   font-family: Montserrat, arial;
   padding: 0;
   margin: 0;
-  --cor-primaria: #283846;
-  --cor-secundaria: #ece4ff;
-  --cor-terciaria: #a13838;
+  --cor-primaria: #f3f3f3;
+  --cor-secundaria: #2b2b2b;
+  --cor-terciaria: #76a3c2;
   scroll-behavior: smooth;
 }
 
@@ -51,7 +51,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--cor-primaria);
+  color: var(--cor-secundaria);
   transition: all 0.5s;
 }
 
@@ -72,7 +72,7 @@ nav ul li a:hover {
   height: 75vh;
   padding: 36px 0px;
   margin: 0px 0px 120px 0px;
-  box-shadow: 10px 0px 10px var(--cor-primaria);
+  box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.3);
 }
 
 .hero-section h1 {
@@ -209,16 +209,19 @@ nav ul li a:hover {
 }
 
 .sobre-right-container {
+  display: flex;
   flex: 1;
-  height: 400px;
+  height: auto;
   border-radius: 2000px;
-  background-color: var(--cor-secundaria);
   background-image: url('images/placeholder.jpg');
   object-fit: cover;
+  justify-content: center;
 }
 
 .sobre-right-container img {
-  height: 400px;
+  height: 450px;
+  border-radius: 1000px;
+  border: 10px solid var(--cor-secundaria);
 }
 
 .tools-container{
@@ -248,6 +251,7 @@ nav ul li a:hover {
   justify-content: center;
   text-align: center;
   row-gap: 24px;
+  scroll-margin-top: 120px;
 }
 
 .projects-section h1 {
@@ -272,6 +276,14 @@ nav ul li a:hover {
   flex-direction: column;
   padding: 24px;
   row-gap: 12px;
+  transition: all 0.2s ease-out;
+  max-height: 600px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+  transform: scale(0.95);
+  transform: translateY(-10px);
 }
 
 .project-image-container {
